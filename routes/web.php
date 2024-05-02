@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'index']);
+
+
+/*CRUD operations */
+
+Route::resource('comics', ComicsController::class);

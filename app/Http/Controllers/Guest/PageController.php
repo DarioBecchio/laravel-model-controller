@@ -19,8 +19,10 @@ class PageController extends Controller
         //$movies = Movie::where('vote', '>' , 8)->orderBy('date' , 'desc')->limit(2) ->get();
         
         //paginate va abbinato a links nella pagina dove stampiamo
-        $movies = Movie::where('vote', '>' , 8)->orderBy('date' , 'desc') ->paginate(4);
-        //dd($movies);
+        //$movies = Movie::where('vote', '>' , 8)->orderBy('date' , 'desc') ->paginate(4);
+        
+        $movie = Movie::find(7);
+        dd($movie);
         return view('home', compact('movies'));
-    }
+    } 
 }
